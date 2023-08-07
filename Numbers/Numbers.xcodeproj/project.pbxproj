@@ -9,24 +9,21 @@
 /* Begin PBXBuildFile section */
 		7BD67FB62A81805B00AE4051 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD67FB52A81805B00AE4051 /* AppDelegate.swift */; };
 		7BD67FB82A81805B00AE4051 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD67FB72A81805B00AE4051 /* SceneDelegate.swift */; };
-		7BD67FBA2A81805B00AE4051 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD67FB92A81805B00AE4051 /* ViewController.swift */; };
+		7BD67FBA2A81805B00AE4051 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD67FB92A81805B00AE4051 /* GameViewController.swift */; };
 		7BD67FBD2A81805B00AE4051 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BD67FBB2A81805B00AE4051 /* Main.storyboard */; };
 		7BD67FBF2A81805D00AE4051 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BD67FBE2A81805D00AE4051 /* Assets.xcassets */; };
 		7BD67FC22A81805D00AE4051 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BD67FC02A81805D00AE4051 /* LaunchScreen.storyboard */; };
 		7BD67FCD2A81805D00AE4051 /* NumbersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD67FCC2A81805D00AE4051 /* NumbersTests.swift */; };
-		7BD67FD72A81805D00AE4051 /* NumbersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD67FD62A81805D00AE4051 /* NumbersUITests.swift */; };
-		7BD67FD92A81805D00AE4051 /* NumbersUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD67FD82A81805D00AE4051 /* NumbersUITestsLaunchTests.swift */; };
+		7BD67FEB2A8181F800AE4051 /* NumberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD67FEA2A8181F800AE4051 /* NumberCell.swift */; };
+		7BD67FEE2A81845E00AE4051 /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 7BD67FED2A81845E00AE4051 /* RswiftLibrary */; };
+		7BD67FF12A81857300AE4051 /* NumberCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD67FF02A81857200AE4051 /* NumberCellViewModel.swift */; };
+		7BD67FF92A818BD100AE4051 /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD67FF82A818BD100AE4051 /* Engine.swift */; };
+		7BD67FFC2A818DE400AE4051 /* Randomizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD67FFB2A818DE400AE4051 /* Randomizer.swift */; };
+		7BD67FFE2A819A3D00AE4051 /* EngineIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD67FFD2A819A3D00AE4051 /* EngineIterator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		7BD67FC92A81805D00AE4051 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7BD67FAA2A81805B00AE4051 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7BD67FB12A81805B00AE4051;
-			remoteInfo = Numbers;
-		};
-		7BD67FD32A81805D00AE4051 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7BD67FAA2A81805B00AE4051 /* Project object */;
 			proxyType = 1;
@@ -39,16 +36,18 @@
 		7BD67FB22A81805B00AE4051 /* Numbers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Numbers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BD67FB52A81805B00AE4051 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7BD67FB72A81805B00AE4051 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7BD67FB92A81805B00AE4051 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7BD67FB92A81805B00AE4051 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		7BD67FBC2A81805B00AE4051 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7BD67FBE2A81805D00AE4051 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7BD67FC12A81805D00AE4051 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7BD67FC32A81805D00AE4051 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7BD67FC82A81805D00AE4051 /* NumbersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NumbersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BD67FCC2A81805D00AE4051 /* NumbersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersTests.swift; sourceTree = "<group>"; };
-		7BD67FD22A81805D00AE4051 /* NumbersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NumbersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7BD67FD62A81805D00AE4051 /* NumbersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersUITests.swift; sourceTree = "<group>"; };
-		7BD67FD82A81805D00AE4051 /* NumbersUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7BD67FEA2A8181F800AE4051 /* NumberCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberCell.swift; sourceTree = "<group>"; };
+		7BD67FF02A81857200AE4051 /* NumberCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberCellViewModel.swift; sourceTree = "<group>"; };
+		7BD67FF82A818BD100AE4051 /* Engine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Engine.swift; sourceTree = "<group>"; };
+		7BD67FFB2A818DE400AE4051 /* Randomizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Randomizer.swift; sourceTree = "<group>"; };
+		7BD67FFD2A819A3D00AE4051 /* EngineIterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngineIterator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,17 +55,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BD67FEE2A81845E00AE4051 /* RswiftLibrary in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		7BD67FC52A81805D00AE4051 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7BD67FCF2A81805D00AE4051 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -81,7 +74,6 @@
 			children = (
 				7BD67FB42A81805B00AE4051 /* Numbers */,
 				7BD67FCB2A81805D00AE4051 /* NumbersTests */,
-				7BD67FD52A81805D00AE4051 /* NumbersUITests */,
 				7BD67FB32A81805B00AE4051 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,7 +83,6 @@
 			children = (
 				7BD67FB22A81805B00AE4051 /* Numbers.app */,
 				7BD67FC82A81805D00AE4051 /* NumbersTests.xctest */,
-				7BD67FD22A81805D00AE4051 /* NumbersUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,13 +90,10 @@
 		7BD67FB42A81805B00AE4051 /* Numbers */ = {
 			isa = PBXGroup;
 			children = (
-				7BD67FB52A81805B00AE4051 /* AppDelegate.swift */,
-				7BD67FB72A81805B00AE4051 /* SceneDelegate.swift */,
-				7BD67FB92A81805B00AE4051 /* ViewController.swift */,
-				7BD67FBB2A81805B00AE4051 /* Main.storyboard */,
-				7BD67FBE2A81805D00AE4051 /* Assets.xcassets */,
-				7BD67FC02A81805D00AE4051 /* LaunchScreen.storyboard */,
-				7BD67FC32A81805D00AE4051 /* Info.plist */,
+				7BD67FFA2A818CB500AE4051 /* Models */,
+				7BD67FF72A818BC200AE4051 /* Engine */,
+				7BD67FE62A81809400AE4051 /* Supporting */,
+				7BD67FE52A81808F00AE4051 /* UI */,
 			);
 			path = Numbers;
 			sourceTree = "<group>";
@@ -118,13 +106,76 @@
 			path = NumbersTests;
 			sourceTree = "<group>";
 		};
-		7BD67FD52A81805D00AE4051 /* NumbersUITests */ = {
+		7BD67FE52A81808F00AE4051 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				7BD67FD62A81805D00AE4051 /* NumbersUITests.swift */,
-				7BD67FD82A81805D00AE4051 /* NumbersUITestsLaunchTests.swift */,
+				7BD67FE82A8181BF00AE4051 /* Game */,
+				7BD67FE72A8180D600AE4051 /* Storyboards */,
 			);
-			path = NumbersUITests;
+			path = UI;
+			sourceTree = "<group>";
+		};
+		7BD67FE62A81809400AE4051 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				7BD67FB72A81805B00AE4051 /* SceneDelegate.swift */,
+				7BD67FB52A81805B00AE4051 /* AppDelegate.swift */,
+				7BD67FBE2A81805D00AE4051 /* Assets.xcassets */,
+				7BD67FC32A81805D00AE4051 /* Info.plist */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
+		7BD67FE72A8180D600AE4051 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				7BD67FBB2A81805B00AE4051 /* Main.storyboard */,
+				7BD67FC02A81805D00AE4051 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		7BD67FE82A8181BF00AE4051 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				7BD67FE92A8181C500AE4051 /* Views */,
+				7BD67FB92A81805B00AE4051 /* GameViewController.swift */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		7BD67FE92A8181C500AE4051 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7BD67FEF2A81856100AE4051 /* NumberCell */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7BD67FEF2A81856100AE4051 /* NumberCell */ = {
+			isa = PBXGroup;
+			children = (
+				7BD67FEA2A8181F800AE4051 /* NumberCell.swift */,
+				7BD67FF02A81857200AE4051 /* NumberCellViewModel.swift */,
+			);
+			path = NumberCell;
+			sourceTree = "<group>";
+		};
+		7BD67FF72A818BC200AE4051 /* Engine */ = {
+			isa = PBXGroup;
+			children = (
+				7BD67FF82A818BD100AE4051 /* Engine.swift */,
+				7BD67FFB2A818DE400AE4051 /* Randomizer.swift */,
+				7BD67FFD2A819A3D00AE4051 /* EngineIterator.swift */,
+			);
+			path = Engine;
+			sourceTree = "<group>";
+		};
+		7BD67FFA2A818CB500AE4051 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,8 +192,12 @@
 			buildRules = (
 			);
 			dependencies = (
+				7BD67FF32A81874600AE4051 /* PBXTargetDependency */,
 			);
 			name = Numbers;
+			packageProductDependencies = (
+				7BD67FED2A81845E00AE4051 /* RswiftLibrary */,
+			);
 			productName = Numbers;
 			productReference = 7BD67FB22A81805B00AE4051 /* Numbers.app */;
 			productType = "com.apple.product-type.application";
@@ -165,24 +220,6 @@
 			productReference = 7BD67FC82A81805D00AE4051 /* NumbersTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		7BD67FD12A81805D00AE4051 /* NumbersUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7BD67FE22A81805D00AE4051 /* Build configuration list for PBXNativeTarget "NumbersUITests" */;
-			buildPhases = (
-				7BD67FCE2A81805D00AE4051 /* Sources */,
-				7BD67FCF2A81805D00AE4051 /* Frameworks */,
-				7BD67FD02A81805D00AE4051 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				7BD67FD42A81805D00AE4051 /* PBXTargetDependency */,
-			);
-			name = NumbersUITests;
-			productName = NumbersUITests;
-			productReference = 7BD67FD22A81805D00AE4051 /* NumbersUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -200,10 +237,6 @@
 						CreatedOnToolsVersion = 14.1;
 						TestTargetID = 7BD67FB12A81805B00AE4051;
 					};
-					7BD67FD12A81805D00AE4051 = {
-						CreatedOnToolsVersion = 14.1;
-						TestTargetID = 7BD67FB12A81805B00AE4051;
-					};
 				};
 			};
 			buildConfigurationList = 7BD67FAD2A81805B00AE4051 /* Build configuration list for PBXProject "Numbers" */;
@@ -215,13 +248,15 @@
 				Base,
 			);
 			mainGroup = 7BD67FA92A81805B00AE4051;
+			packageReferences = (
+				7BD67FEC2A81845E00AE4051 /* XCRemoteSwiftPackageReference "R" */,
+			);
 			productRefGroup = 7BD67FB32A81805B00AE4051 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				7BD67FB12A81805B00AE4051 /* Numbers */,
 				7BD67FC72A81805D00AE4051 /* NumbersTests */,
-				7BD67FD12A81805D00AE4051 /* NumbersUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -244,13 +279,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7BD67FD02A81805D00AE4051 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -258,9 +286,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7BD67FBA2A81805B00AE4051 /* ViewController.swift in Sources */,
+				7BD67FEB2A8181F800AE4051 /* NumberCell.swift in Sources */,
+				7BD67FF92A818BD100AE4051 /* Engine.swift in Sources */,
+				7BD67FBA2A81805B00AE4051 /* GameViewController.swift in Sources */,
 				7BD67FB62A81805B00AE4051 /* AppDelegate.swift in Sources */,
 				7BD67FB82A81805B00AE4051 /* SceneDelegate.swift in Sources */,
+				7BD67FF12A81857300AE4051 /* NumberCellViewModel.swift in Sources */,
+				7BD67FFC2A818DE400AE4051 /* Randomizer.swift in Sources */,
+				7BD67FFE2A819A3D00AE4051 /* EngineIterator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,15 +305,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7BD67FCE2A81805D00AE4051 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7BD67FD72A81805D00AE4051 /* NumbersUITests.swift in Sources */,
-				7BD67FD92A81805D00AE4051 /* NumbersUITestsLaunchTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -289,10 +313,9 @@
 			target = 7BD67FB12A81805B00AE4051 /* Numbers */;
 			targetProxy = 7BD67FC92A81805D00AE4051 /* PBXContainerItemProxy */;
 		};
-		7BD67FD42A81805D00AE4051 /* PBXTargetDependency */ = {
+		7BD67FF32A81874600AE4051 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7BD67FB12A81805B00AE4051 /* Numbers */;
-			targetProxy = 7BD67FD32A81805D00AE4051 /* PBXContainerItemProxy */;
+			productRef = 7BD67FF22A81874600AE4051 /* RswiftGenerateInternalResources */;
 		};
 /* End PBXTargetDependency section */
 
@@ -439,12 +462,15 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = LFSXRQW2Z2;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Numbers/Info.plist;
+				INFOPLIST_FILE = Numbers/Supporting/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.board-games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -467,12 +493,15 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = LFSXRQW2Z2;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Numbers/Info.plist;
+				INFOPLIST_FILE = Numbers/Supporting/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.board-games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -526,42 +555,6 @@
 			};
 			name = Release;
 		};
-		7BD67FE32A81805D00AE4051 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = LFSXRQW2Z2;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.sitic.NumbersUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Numbers;
-			};
-			name = Debug;
-		};
-		7BD67FE42A81805D00AE4051 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = LFSXRQW2Z2;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.sitic.NumbersUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Numbers;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -592,16 +585,30 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7BD67FE22A81805D00AE4051 /* Build configuration list for PBXNativeTarget "NumbersUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7BD67FE32A81805D00AE4051 /* Debug */,
-				7BD67FE42A81805D00AE4051 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7BD67FEC2A81845E00AE4051 /* XCRemoteSwiftPackageReference "R" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mac-cain13/R.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7BD67FED2A81845E00AE4051 /* RswiftLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7BD67FEC2A81845E00AE4051 /* XCRemoteSwiftPackageReference "R" */;
+			productName = RswiftLibrary;
+		};
+		7BD67FF22A81874600AE4051 /* RswiftGenerateInternalResources */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = "plugin:RswiftGenerateInternalResources";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7BD67FAA2A81805B00AE4051 /* Project object */;
 }
