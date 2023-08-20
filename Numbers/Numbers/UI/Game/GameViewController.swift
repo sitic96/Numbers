@@ -29,7 +29,7 @@ final class GameViewController: UIViewController {
     
     private func start() {
         engineIterator.reset()
-        engine.start(with: .classic)
+        engine.start(with: .classic, randomizer: Randomizer())
         numbersCollectionView.reloadData()
     }
 }
@@ -44,7 +44,8 @@ extension GameViewController: UICollectionViewDelegate, UICollectionViewDataSour
             return UICollectionViewCell()
         }
         
-        cell.setUp(for: .number(.init(number: engineIterator.next(), isSelected: false)))
+        cell.setUp(for: .number(.init(item: engineIterator.next(),
+                                      isSelected: false)))
         return cell
     }
     

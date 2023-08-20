@@ -14,6 +14,6 @@ enum NumberCellState {
 }
 
 struct NumberCellViewModel {
-    let number: Int?
+    let item: Cell?
     let isSelected: Bool
 }

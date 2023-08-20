@@ -53,8 +53,8 @@ extension NumberCell: NumberCellProtocol {
             numberImageView.image = R.image.next()
             overlayImageView.isHidden = true
         case .number(let viewModel):
-            if let number = viewModel.number {
-                numberImageView.image = imageForNumber(number)
+            if let item = viewModel.item {
+                numberImageView.image = imageForNumber(item.number)
             }
             overlayImageView.isHidden = !viewModel.isSelected
         }

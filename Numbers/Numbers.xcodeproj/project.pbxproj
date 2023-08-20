@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B23BC3F2A9245E000A19DA1 /* EngineIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD67FFD2A819A3D00AE4051 /* EngineIterator.swift */; };
+		7B4A8A852A8E5E0A00AC7CF2 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 7B4A8A842A8E5E0A00AC7CF2 /* Swinject */; };
+		7B4A8A882A8E61D000AC7CF2 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4A8A872A8E61D000AC7CF2 /* Cell.swift */; };
+		7B4A8A8B2A8E61E500AC7CF2 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4A8A8A2A8E61E500AC7CF2 /* Position.swift */; };
 		7BD67FB62A81805B00AE4051 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD67FB52A81805B00AE4051 /* AppDelegate.swift */; };
 		7BD67FB82A81805B00AE4051 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD67FB72A81805B00AE4051 /* SceneDelegate.swift */; };
 		7BD67FBA2A81805B00AE4051 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD67FB92A81805B00AE4051 /* GameViewController.swift */; };
@@ -19,7 +23,6 @@
 		7BD67FF12A81857300AE4051 /* NumberCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD67FF02A81857200AE4051 /* NumberCellViewModel.swift */; };
 		7BD67FF92A818BD100AE4051 /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD67FF82A818BD100AE4051 /* Engine.swift */; };
 		7BD67FFC2A818DE400AE4051 /* Randomizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD67FFB2A818DE400AE4051 /* Randomizer.swift */; };
-		7BD67FFE2A819A3D00AE4051 /* EngineIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD67FFD2A819A3D00AE4051 /* EngineIterator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7B4A8A872A8E61D000AC7CF2 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		7B4A8A8A2A8E61E500AC7CF2 /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
 		7BD67FB22A81805B00AE4051 /* Numbers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Numbers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BD67FB52A81805B00AE4051 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7BD67FB72A81805B00AE4051 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +61,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BD67FEE2A81845E00AE4051 /* RswiftLibrary in Frameworks */,
+				7B4A8A852A8E5E0A00AC7CF2 /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,6 +180,8 @@
 		7BD67FFA2A818CB500AE4051 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				7B4A8A872A8E61D000AC7CF2 /* Cell.swift */,
+				7B4A8A8A2A8E61E500AC7CF2 /* Position.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -197,6 +205,7 @@
 			name = Numbers;
 			packageProductDependencies = (
 				7BD67FED2A81845E00AE4051 /* RswiftLibrary */,
+				7B4A8A842A8E5E0A00AC7CF2 /* Swinject */,
 			);
 			productName = Numbers;
 			productReference = 7BD67FB22A81805B00AE4051 /* Numbers.app */;
@@ -250,6 +259,7 @@
 			mainGroup = 7BD67FA92A81805B00AE4051;
 			packageReferences = (
 				7BD67FEC2A81845E00AE4051 /* XCRemoteSwiftPackageReference "R" */,
+				7B4A8A832A8E5E0A00AC7CF2 /* XCRemoteSwiftPackageReference "Swinject" */,
 			);
 			productRefGroup = 7BD67FB32A81805B00AE4051 /* Products */;
 			projectDirPath = "";
@@ -287,13 +297,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BD67FEB2A8181F800AE4051 /* NumberCell.swift in Sources */,
+				7B23BC3F2A9245E000A19DA1 /* EngineIterator.swift in Sources */,
 				7BD67FF92A818BD100AE4051 /* Engine.swift in Sources */,
 				7BD67FBA2A81805B00AE4051 /* GameViewController.swift in Sources */,
 				7BD67FB62A81805B00AE4051 /* AppDelegate.swift in Sources */,
 				7BD67FB82A81805B00AE4051 /* SceneDelegate.swift in Sources */,
+				7B4A8A882A8E61D000AC7CF2 /* Cell.swift in Sources */,
 				7BD67FF12A81857300AE4051 /* NumberCellViewModel.swift in Sources */,
 				7BD67FFC2A818DE400AE4051 /* Randomizer.swift in Sources */,
-				7BD67FFE2A819A3D00AE4051 /* EngineIterator.swift in Sources */,
+				7B4A8A8B2A8E61E500AC7CF2 /* Position.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,6 +600,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		7B4A8A832A8E5E0A00AC7CF2 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 		7BD67FEC2A81845E00AE4051 /* XCRemoteSwiftPackageReference "R" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mac-cain13/R.swift";
@@ -599,6 +619,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		7B4A8A842A8E5E0A00AC7CF2 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7B4A8A832A8E5E0A00AC7CF2 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
 		7BD67FED2A81845E00AE4051 /* RswiftLibrary */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 7BD67FEC2A81845E00AE4051 /* XCRemoteSwiftPackageReference "R" */;

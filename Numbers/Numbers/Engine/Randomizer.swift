@@ -8,20 +8,22 @@
 import Foundation
 
 protocol RandomizerProtocol {
-    func randomNumber() -> Int
-    func randomNumbers(count: Int) -> [Int]
+    func randomItems(count: Int) -> [Cell]
 }
 
 struct Randomizer: RandomizerProtocol {
-    func randomNumber() -> Int {
+    private func randomNumber() -> Int {
         Int.random(in: 1...9)
     }
     
-    func randomNumbers(count: Int) -> [Int] {
+    func randomItems(count: Int) -> [Cell] {
         var array = [Int]()
         for _ in 0..<count {
             array.append(randomNumber())
         }
-        return array
+        return array.enumerated().map {
+            Cell(number: $1,
+                 position: Position(row: $0.quotientAndRemainder(dividingBy: 9).quotient, item: $0 % 9))
+        }
     }
 }

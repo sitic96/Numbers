@@ -8,7 +8,7 @@
 import Foundation
 
 protocol EngineIteratorProtocol {
-    func next() -> Int?
+    func next() -> Cell?
     func reset()
 }
 
@@ -24,14 +24,14 @@ final class EngineIterator: EngineIteratorProtocol {
         self.currentItem = 0
     }
     
-    private func item(at row: Int, item: Int) -> Int? {
+    private func item(at row: Int, item: Int) -> Cell? {
         currentItem+=1
-        return engine.items[row][item]
+        return engine.items.first(where: { $0?.position.row == row && $0?.position.item == item }) ?? nil
     }
     
-    func next() -> Int? {
-        if engine.items.count > currentRow {
-            if engine.items[currentRow].count > currentItem {
+    func next() -> Cell? {
+        if engine.items.count.quotientAndRemainder(dividingBy: 9).quotient >= currentRow {
+            if currentItem < 9 {
                 return item(at: currentRow, item: currentItem)
             } else {
                 currentRow+=1
