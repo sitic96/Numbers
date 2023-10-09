@@ -7,17 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6BFACF2DC554A7B987C71A16 /* NumbersTests-NumbersMocks.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = F491B8A6B4D120FE491A7F04 /* NumbersTests-NumbersMocks.generated.swift */; };
 		7B23BC3F2A9245E000A19DA1 /* EngineIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD67FFD2A819A3D00AE4051 /* EngineIterator.swift */; };
 		7B4A8A852A8E5E0A00AC7CF2 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 7B4A8A842A8E5E0A00AC7CF2 /* Swinject */; };
 		7B4A8A882A8E61D000AC7CF2 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4A8A872A8E61D000AC7CF2 /* Cell.swift */; };
 		7B4A8A8B2A8E61E500AC7CF2 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4A8A8A2A8E61E500AC7CF2 /* Position.swift */; };
+		7B57B7662AD45C140076E0D3 /* Mockingbird in Frameworks */ = {isa = PBXBuildFile; productRef = 7B57B7652AD45C140076E0D3 /* Mockingbird */; };
+		7B57B76A2AD45F440076E0D3 /* Fakery in Frameworks */ = {isa = PBXBuildFile; productRef = 7B57B7692AD45F440076E0D3 /* Fakery */; };
 		7BD67FB62A81805B00AE4051 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD67FB52A81805B00AE4051 /* AppDelegate.swift */; };
 		7BD67FB82A81805B00AE4051 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD67FB72A81805B00AE4051 /* SceneDelegate.swift */; };
 		7BD67FBA2A81805B00AE4051 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD67FB92A81805B00AE4051 /* GameViewController.swift */; };
 		7BD67FBD2A81805B00AE4051 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BD67FBB2A81805B00AE4051 /* Main.storyboard */; };
 		7BD67FBF2A81805D00AE4051 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BD67FBE2A81805D00AE4051 /* Assets.xcassets */; };
 		7BD67FC22A81805D00AE4051 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BD67FC02A81805D00AE4051 /* LaunchScreen.storyboard */; };
-		7BD67FCD2A81805D00AE4051 /* NumbersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD67FCC2A81805D00AE4051 /* NumbersTests.swift */; };
+		7BD67FCD2A81805D00AE4051 /* EngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD67FCC2A81805D00AE4051 /* EngineTests.swift */; };
 		7BD67FEB2A8181F800AE4051 /* NumberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD67FEA2A8181F800AE4051 /* NumberCell.swift */; };
 		7BD67FEE2A81845E00AE4051 /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 7BD67FED2A81845E00AE4051 /* RswiftLibrary */; };
 		7BD67FF12A81857300AE4051 /* NumberCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD67FF02A81857200AE4051 /* NumberCellModel.swift */; };
@@ -47,12 +50,13 @@
 		7BD67FC12A81805D00AE4051 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7BD67FC32A81805D00AE4051 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7BD67FC82A81805D00AE4051 /* NumbersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NumbersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7BD67FCC2A81805D00AE4051 /* NumbersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersTests.swift; sourceTree = "<group>"; };
+		7BD67FCC2A81805D00AE4051 /* EngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngineTests.swift; sourceTree = "<group>"; };
 		7BD67FEA2A8181F800AE4051 /* NumberCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberCell.swift; sourceTree = "<group>"; };
 		7BD67FF02A81857200AE4051 /* NumberCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberCellModel.swift; sourceTree = "<group>"; };
 		7BD67FF82A818BD100AE4051 /* Engine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Engine.swift; sourceTree = "<group>"; };
 		7BD67FFB2A818DE400AE4051 /* Randomizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Randomizer.swift; sourceTree = "<group>"; };
 		7BD67FFD2A819A3D00AE4051 /* EngineIterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngineIterator.swift; sourceTree = "<group>"; };
+		F491B8A6B4D120FE491A7F04 /* NumbersTests-NumbersMocks.generated.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = "NumbersTests-NumbersMocks.generated.swift"; path = "MockingbirdMocks/NumbersTests-NumbersMocks.generated.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,18 +73,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B57B76A2AD45F440076E0D3 /* Fakery in Frameworks */,
+				7B57B7662AD45C140076E0D3 /* Mockingbird in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		373490ACDAEBD65107B30EC6 /* Generated Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				F491B8A6B4D120FE491A7F04 /* NumbersTests-NumbersMocks.generated.swift */,
+			);
+			name = "Generated Mocks";
+			sourceTree = "<group>";
+		};
 		7BD67FA92A81805B00AE4051 = {
 			isa = PBXGroup;
 			children = (
 				7BD67FB42A81805B00AE4051 /* Numbers */,
 				7BD67FCB2A81805D00AE4051 /* NumbersTests */,
 				7BD67FB32A81805B00AE4051 /* Products */,
+				373490ACDAEBD65107B30EC6 /* Generated Mocks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,7 +122,9 @@
 		7BD67FCB2A81805D00AE4051 /* NumbersTests */ = {
 			isa = PBXGroup;
 			children = (
-				7BD67FCC2A81805D00AE4051 /* NumbersTests.swift */,
+				7BE114482AD4560600F3BBF3 /* Stubs */,
+				7BE114462AD451D100F3BBF3 /* Mocks */,
+				7BD67FCC2A81805D00AE4051 /* EngineTests.swift */,
 			);
 			path = NumbersTests;
 			sourceTree = "<group>";
@@ -186,6 +203,20 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		7BE114462AD451D100F3BBF3 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		7BE114482AD4560600F3BBF3 /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Stubs;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -215,6 +246,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7BD67FDF2A81805D00AE4051 /* Build configuration list for PBXNativeTarget "NumbersTests" */;
 			buildPhases = (
+				6B7B38931887C5300B4C9AA9 /* Generate Mockingbird Mocks */,
 				7BD67FC42A81805D00AE4051 /* Sources */,
 				7BD67FC52A81805D00AE4051 /* Frameworks */,
 				7BD67FC62A81805D00AE4051 /* Resources */,
@@ -225,6 +257,10 @@
 				7BD67FCA2A81805D00AE4051 /* PBXTargetDependency */,
 			);
 			name = NumbersTests;
+			packageProductDependencies = (
+				7B57B7652AD45C140076E0D3 /* Mockingbird */,
+				7B57B7692AD45F440076E0D3 /* Fakery */,
+			);
 			productName = NumbersTests;
 			productReference = 7BD67FC82A81805D00AE4051 /* NumbersTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -260,6 +296,8 @@
 			packageReferences = (
 				7BD67FEC2A81845E00AE4051 /* XCRemoteSwiftPackageReference "R" */,
 				7B4A8A832A8E5E0A00AC7CF2 /* XCRemoteSwiftPackageReference "Swinject" */,
+				7B57B7642AD45C140076E0D3 /* XCRemoteSwiftPackageReference "mockingbird" */,
+				7B57B7682AD45F440076E0D3 /* XCRemoteSwiftPackageReference "Fakery" */,
 			);
 			productRefGroup = 7BD67FB32A81805B00AE4051 /* Products */;
 			projectDirPath = "";
@@ -291,6 +329,25 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6B7B38931887C5300B4C9AA9 /* Generate Mockingbird Mocks */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate Mockingbird Mocks";
+			outputPaths = (
+				"$(SRCROOT)/MockingbirdMocks/NumbersTests-NumbersMocks.generated.swift",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -eu\n\n# Prevent Xcode 13 from running this script while indexing.\n[[ \"${ACTION}\" == \"indexbuild\" ]] && exit 0\n\n# Infer the derived data location from the build environment.\n[[ -z \"${DERIVED_DATA+x}\" ]] && DERIVED_DATA=\"$(echo \"${BUILD_ROOT}\" | sed -n 's|\\(.*\\)/Build/.*|\\1|p')\"\n\n\"${DERIVED_DATA}/SourcePackages/checkouts/mockingbird/mockingbird\" generate --targets \"Numbers\" --outputs \"${SRCROOT}/MockingbirdMocks/NumbersTests-NumbersMocks.generated.swift\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7BD67FAE2A81805B00AE4051 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -313,7 +370,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7BD67FCD2A81805D00AE4051 /* NumbersTests.swift in Sources */,
+				7BD67FCD2A81805D00AE4051 /* EngineTests.swift in Sources */,
+				6BFACF2DC554A7B987C71A16 /* NumbersTests-NumbersMocks.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -608,6 +666,22 @@
 				minimumVersion = 2.0.0;
 			};
 		};
+		7B57B7642AD45C140076E0D3 /* XCRemoteSwiftPackageReference "mockingbird" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/birdrides/mockingbird.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 0.20.0;
+			};
+		};
+		7B57B7682AD45F440076E0D3 /* XCRemoteSwiftPackageReference "Fakery" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/vadymmarkov/Fakery.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 5.1.0;
+			};
+		};
 		7BD67FEC2A81845E00AE4051 /* XCRemoteSwiftPackageReference "R" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mac-cain13/R.swift";
@@ -623,6 +697,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7B4A8A832A8E5E0A00AC7CF2 /* XCRemoteSwiftPackageReference "Swinject" */;
 			productName = Swinject;
+		};
+		7B57B7652AD45C140076E0D3 /* Mockingbird */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7B57B7642AD45C140076E0D3 /* XCRemoteSwiftPackageReference "mockingbird" */;
+			productName = Mockingbird;
+		};
+		7B57B7692AD45F440076E0D3 /* Fakery */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7B57B7682AD45F440076E0D3 /* XCRemoteSwiftPackageReference "Fakery" */;
+			productName = Fakery;
 		};
 		7BD67FED2A81845E00AE4051 /* RswiftLibrary */ = {
 			isa = XCSwiftPackageProductDependency;

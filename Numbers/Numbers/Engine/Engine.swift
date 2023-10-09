@@ -25,8 +25,8 @@ final class Engine {
     static let shared: EngineProtocol = Engine()
     
     var items = [Cell?]()
-    var randomizer: RandomizerProtocol!
     
+    private var randomizer: RandomizerProtocol!
     private(set) var selectedCell: Cell?
     
     private init() { }
@@ -38,7 +38,8 @@ final class Engine {
     
     private func canBeRemoved(_ cell: Cell) -> Bool {
         guard let selectedCell,
-              selectedCell.number == cell.number else {
+              selectedCell.number == cell.number ||
+                selectedCell.number + cell.number == 10 else {
             return false
         }
         
@@ -97,19 +98,30 @@ final class Engine {
     }
     
     private func isNext(_ cell: Cell, to selectedCell: Cell) -> Bool {
-        let nextCell = items
-            .compactMap { $0 }
-            .first(where: { $0.position.row > selectedCell.position.row || $0.position.item > selectedCell.position.item })
+        let visibleItems = items.compactMap { $0 }
         
-        return nextCell?.position == cell.position
+        guard let index = visibleItems.firstIndex(of: selectedCell),
+              index < visibleItems.count-1 else {
+            return false
+        }
+//        let nextCell = items
+//            .compactMap { $0 }
+//            .first(where: { $0.position.row > selectedCell.position.row ||
+//                ($0.position.item > selectedCell.position.item && $0.position.row == selectedCell.position.row ) })
+        
+        return visibleItems[index+1].position == cell.position
     }
     
     private func isPrev(_ cell: Cell, to selectedCell: Cell) -> Bool {
-        let nextCell = items
-            .compactMap { $0 }
-            .first(where: { $0.position.row < selectedCell.position.row || $0.position.item < selectedCell.position.item })
+        let visibleItems = items.compactMap { $0 }
+        guard let index = visibleItems.firstIndex(of: selectedCell),
+              index > 0 else {
+            return false
+        }
+//            .first(where: { $0.position.row < selectedCell.position.row ||
+//                ($0.position.item < selectedCell.position.item && $0.position.row == selectedCell.position.row) })
         
-        return nextCell?.position == cell.position
+        return visibleItems[index-1].position == cell.position
     }
 }
 
