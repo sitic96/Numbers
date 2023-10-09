@@ -8,12 +8,25 @@
 import UIKit
 
 protocol NumberCellProtocol {
-    func setUp(for state: NumberCellState)
+    var viewModel: NumberCellModel? { get }
+    
+    func setUp(for viewModel: NumberCellModel)
 }
 
 final class NumberCell: UICollectionViewCell {
     @IBOutlet private var numberImageView: UIImageView!
     @IBOutlet private var overlayImageView: UIImageView!
+    
+    var viewModel: NumberCellModel?
+    
+    // MARK: - Override
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        self.viewModel = nil
+    }
+    
+    // MARK: - Private
     
     private func imageForNumber(_ number: Int) -> UIImage? {
         switch number {
@@ -44,19 +57,15 @@ final class NumberCell: UICollectionViewCell {
 // MARK: - NumberCellProtocol
 
 extension NumberCell: NumberCellProtocol {
-    func setUp(for state: NumberCellState) {
-        switch state {
-        case .empty:
+    func setUp(for viewModel: NumberCellModel) {
+        self.viewModel = viewModel
+        
+        if let cell = viewModel.item {
+            numberImageView.image = imageForNumber(cell.number)
+            overlayImageView.isHidden = !viewModel.isSelected
+        } else {
             numberImageView.image = nil
             overlayImageView.isHidden = true
-        case .next:
-            numberImageView.image = R.image.next()
-            overlayImageView.isHidden = true
-        case .number(let viewModel):
-            if let item = viewModel.item {
-                numberImageView.image = imageForNumber(item.number)
-            }
-            overlayImageView.isHidden = !viewModel.isSelected
         }
     }
 }

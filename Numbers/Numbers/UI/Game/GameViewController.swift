@@ -34,6 +34,8 @@ final class GameViewController: UIViewController {
     }
 }
 
+// MARK: - UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
+
 extension GameViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         engine.itemsCount
@@ -44,9 +46,21 @@ extension GameViewController: UICollectionViewDelegate, UICollectionViewDataSour
             return UICollectionViewCell()
         }
         
-        cell.setUp(for: .number(.init(item: engineIterator.next(),
-                                      isSelected: false)))
+        let item = engineIterator.next()
+        cell.setUp(for: .init(item: item,
+                              isSelected: engine.selectedCell == item &&
+                              engine.selectedCell != nil ))
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let cell = collectionView.cellForItem(at: indexPath) as? NumberCell,
+              let item = cell.viewModel?.item else {
+            return
+        }
+        engine.didSelect(cell: item)
+        engineIterator.reset()
+        collectionView.reloadData()
     }
     
     func collectionView(_ collectionView: UICollectionView,

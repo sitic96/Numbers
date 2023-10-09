@@ -7,13 +7,7 @@
 
 import Foundation
 
-enum NumberCellState {
-    case empty
-    case next
-    case number(NumberCellViewModel)
-}
-
-struct NumberCellViewModel {
+struct NumberCellModel {
     let item: Cell?
     let isSelected: Bool
 }

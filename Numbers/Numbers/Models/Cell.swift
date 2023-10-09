@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Cell {
+struct Cell: Equatable {
     let number: Int
     let position: Position
 }

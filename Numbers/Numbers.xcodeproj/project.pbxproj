@@ -20,7 +20,7 @@
 		7BD67FCD2A81805D00AE4051 /* NumbersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD67FCC2A81805D00AE4051 /* NumbersTests.swift */; };
 		7BD67FEB2A8181F800AE4051 /* NumberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD67FEA2A8181F800AE4051 /* NumberCell.swift */; };
 		7BD67FEE2A81845E00AE4051 /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 7BD67FED2A81845E00AE4051 /* RswiftLibrary */; };
-		7BD67FF12A81857300AE4051 /* NumberCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD67FF02A81857200AE4051 /* NumberCellViewModel.swift */; };
+		7BD67FF12A81857300AE4051 /* NumberCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD67FF02A81857200AE4051 /* NumberCellModel.swift */; };
 		7BD67FF92A818BD100AE4051 /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD67FF82A818BD100AE4051 /* Engine.swift */; };
 		7BD67FFC2A818DE400AE4051 /* Randomizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD67FFB2A818DE400AE4051 /* Randomizer.swift */; };
 /* End PBXBuildFile section */
@@ -49,7 +49,7 @@
 		7BD67FC82A81805D00AE4051 /* NumbersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NumbersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BD67FCC2A81805D00AE4051 /* NumbersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersTests.swift; sourceTree = "<group>"; };
 		7BD67FEA2A8181F800AE4051 /* NumberCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberCell.swift; sourceTree = "<group>"; };
-		7BD67FF02A81857200AE4051 /* NumberCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberCellViewModel.swift; sourceTree = "<group>"; };
+		7BD67FF02A81857200AE4051 /* NumberCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberCellModel.swift; sourceTree = "<group>"; };
 		7BD67FF82A818BD100AE4051 /* Engine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Engine.swift; sourceTree = "<group>"; };
 		7BD67FFB2A818DE400AE4051 /* Randomizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Randomizer.swift; sourceTree = "<group>"; };
 		7BD67FFD2A819A3D00AE4051 /* EngineIterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngineIterator.swift; sourceTree = "<group>"; };
@@ -162,7 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				7BD67FEA2A8181F800AE4051 /* NumberCell.swift */,
-				7BD67FF02A81857200AE4051 /* NumberCellViewModel.swift */,
+				7BD67FF02A81857200AE4051 /* NumberCellModel.swift */,
 			);
 			path = NumberCell;
 			sourceTree = "<group>";
@@ -303,7 +303,7 @@
 				7BD67FB62A81805B00AE4051 /* AppDelegate.swift in Sources */,
 				7BD67FB82A81805B00AE4051 /* SceneDelegate.swift in Sources */,
 				7B4A8A882A8E61D000AC7CF2 /* Cell.swift in Sources */,
-				7BD67FF12A81857300AE4051 /* NumberCellViewModel.swift in Sources */,
+				7BD67FF12A81857300AE4051 /* NumberCellModel.swift in Sources */,
 				7BD67FFC2A818DE400AE4051 /* Randomizer.swift in Sources */,
 				7B4A8A8B2A8E61E500AC7CF2 /* Position.swift in Sources */,
 			);
@@ -477,7 +477,7 @@
 				INFOPLIST_FILE = Numbers/Supporting/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.board-games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIRequiresFullScreen = NO;
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
@@ -508,7 +508,7 @@
 				INFOPLIST_FILE = Numbers/Supporting/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.board-games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIRequiresFullScreen = NO;
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
