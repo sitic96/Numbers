@@ -17,7 +17,7 @@ protocol EngineProtocol {
     var itemsCount: Int { get }
     var selectedCell: Cell? { get }
     
-    func start(with mode: EngineMode, randomizer: RandomizerProtocol)
+    func start(with mode: EngineMode)
     func didSelect(cell: Cell)
 }
 
@@ -104,11 +104,6 @@ final class Engine {
               index < visibleItems.count-1 else {
             return false
         }
-//        let nextCell = items
-//            .compactMap { $0 }
-//            .first(where: { $0.position.row > selectedCell.position.row ||
-//                ($0.position.item > selectedCell.position.item && $0.position.row == selectedCell.position.row ) })
-        
         return visibleItems[index+1].position == cell.position
     }
     
@@ -118,8 +113,6 @@ final class Engine {
               index > 0 else {
             return false
         }
-//            .first(where: { $0.position.row < selectedCell.position.row ||
-//                ($0.position.item < selectedCell.position.item && $0.position.row == selectedCell.position.row) })
         
         return visibleItems[index-1].position == cell.position
     }
@@ -132,8 +125,8 @@ extension Engine: EngineProtocol {
         items.count
     }
     
-    func start(with mode: EngineMode, randomizer: RandomizerProtocol) {
-        self.randomizer = randomizer
+    func start(with mode: EngineMode) {
+        self.randomizer = nil
         reset()
         
         switch mode {
