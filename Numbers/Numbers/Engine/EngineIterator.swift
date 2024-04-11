@@ -29,8 +29,26 @@ final class EngineIterator: EngineIteratorProtocol {
         return engine.items.first(where: { $0?.position.row == row && $0?.position.item == item }) ?? nil
     }
     
+    private func firstItem() -> Cell? {
+        for item in engine.items {
+            if item != nil {
+                return item
+            }
+        }
+        return nil
+    }
+    
+    private func lastItem() -> Cell? {
+        for item in engine.items.reversed() {
+            if item != nil {
+                return item
+            }
+        }
+        return nil
+    }
+    
     func next() -> Cell? {
-        if engine.items.count.quotientAndRemainder(dividingBy: 9).quotient >= currentRow {
+        if ((lastItem()?.position.row ?? 0) * 9).quotientAndRemainder(dividingBy: 9).quotient >= currentRow {
             if currentItem < 9 {
                 return item(at: currentRow, item: currentItem)
             } else {
@@ -44,7 +62,7 @@ final class EngineIterator: EngineIteratorProtocol {
     }
     
     func reset() {
-        self.currentRow = 0
+        self.currentRow = firstItem()?.position.row ?? 0
         self.currentItem = 0
     }
 }

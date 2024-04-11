@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6BFACF2DC554A7B987C71A16 /* NumbersTests-NumbersMocks.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = F491B8A6B4D120FE491A7F04 /* NumbersTests-NumbersMocks.generated.swift */; };
 		7B23BC3F2A9245E000A19DA1 /* EngineIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD67FFD2A819A3D00AE4051 /* EngineIterator.swift */; };
+		7B45416F2BC771CE00897BE5 /* Sequence+filterWhile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B45416E2BC771CE00897BE5 /* Sequence+filterWhile.swift */; };
 		7B4A8A852A8E5E0A00AC7CF2 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 7B4A8A842A8E5E0A00AC7CF2 /* Swinject */; };
 		7B4A8A882A8E61D000AC7CF2 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4A8A872A8E61D000AC7CF2 /* Cell.swift */; };
 		7B4A8A8B2A8E61E500AC7CF2 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4A8A8A2A8E61E500AC7CF2 /* Position.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7B45416E2BC771CE00897BE5 /* Sequence+filterWhile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence+filterWhile.swift"; sourceTree = "<group>"; };
 		7B4A8A872A8E61D000AC7CF2 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		7B4A8A8A2A8E61E500AC7CF2 /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
 		7BD67FB22A81805B00AE4051 /* Numbers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Numbers.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,6 +91,14 @@
 			name = "Generated Mocks";
 			sourceTree = "<group>";
 		};
+		7B45416D2BC771BB00897BE5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7B45416E2BC771CE00897BE5 /* Sequence+filterWhile.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		7BD67FA92A81805B00AE4051 = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +121,7 @@
 		7BD67FB42A81805B00AE4051 /* Numbers */ = {
 			isa = PBXGroup;
 			children = (
+				7B45416D2BC771BB00897BE5 /* Extensions */,
 				7BD67FFA2A818CB500AE4051 /* Models */,
 				7BD67FF72A818BC200AE4051 /* Engine */,
 				7BD67FE62A81809400AE4051 /* Supporting */,
@@ -356,6 +367,7 @@
 				7BD67FEB2A8181F800AE4051 /* NumberCell.swift in Sources */,
 				7B23BC3F2A9245E000A19DA1 /* EngineIterator.swift in Sources */,
 				7BD67FF92A818BD100AE4051 /* Engine.swift in Sources */,
+				7B45416F2BC771CE00897BE5 /* Sequence+filterWhile.swift in Sources */,
 				7BD67FBA2A81805B00AE4051 /* GameViewController.swift in Sources */,
 				7BD67FB62A81805B00AE4051 /* AppDelegate.swift in Sources */,
 				7BD67FB82A81805B00AE4051 /* SceneDelegate.swift in Sources */,
@@ -537,7 +549,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -548,6 +560,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sitic.Numbers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -568,7 +584,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -579,6 +595,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sitic.Numbers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

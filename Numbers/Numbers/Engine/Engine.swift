@@ -10,10 +10,11 @@ import Foundation
 enum EngineMode {
     case classic
     case random(RandomizerProtocol)
+    case test
 }
 
 protocol EngineProtocol {
-    var items: [Cell?] { get set }
+    var items: [Cell?] { get }
     var itemsCount: Int { get }
     var selectedCell: Cell? { get }
     
@@ -52,19 +53,42 @@ final class Engine {
     
     private func remove(_ firstCell: Cell, _ secondCell: Cell) {
         selectedCell = nil
-        guard let firstIndex = items.firstIndex(of: firstCell),
-              let secondIndex = items.firstIndex(of: secondCell) else {
+        guard let firstIndex = items.firstIndex(of: firstCell) else {
             return
         }
         items[firstIndex] = nil
+        checkLine(forCell: firstCell, atIndex: firstIndex)
+        
+        guard let secondIndex = items.firstIndex(of: secondCell) else {
+            return
+        }
         items[secondIndex] = nil
+        checkLine(forCell: secondCell, atIndex: secondIndex)
+    }
+    
+    private func checkLine(forCell cell: Cell, atIndex index: Int) {
+        let itemsInFirstRow = items.filterWhile(condition: {
+            $0?.position.row == cell.position.row
+        }, stopWhen: {
+            $0?.position.row ?? -1 > cell.position.row
+        })
+        
+        let startRange = index.quotientAndRemainder(dividingBy: 9).quotient * 9
+        if itemsInFirstRow.isEmpty {
+            items.removeSubrange(startRange...min(startRange+8, itemsCount-1))
+            recalculateLines()
+        }
+    }
+    
+    private func recalculateLines() {
+        
     }
     
     private func isTop(_ cell: Cell, to selectedCell: Cell) -> Bool {
         if cell.position.item == selectedCell.position.item {
             var currentRow = selectedCell.position.row - 1
             
-            while currentRow > 0 {
+            while currentRow >= 0 {
                 if let newCell = items.first(where: { $0?.position.item == cell.position.item && $0?.position.row == currentRow }),
                    let newCell {
                     if newCell.position == cell.position {
@@ -140,6 +164,13 @@ extension Engine: EngineProtocol {
         case .random(let randomizer):
             self.randomizer = randomizer
             items = randomizer.randomItems(count: 25)
+        case .test:
+            items = Array<Int>(repeating: 1, count: 25)
+                .enumerated()
+                .map {
+                    Cell(number: $1, position: Position(row: $0.quotientAndRemainder(dividingBy: 9).quotient,
+                                                        item: $0 % 9))
+                }
         }
     }
     

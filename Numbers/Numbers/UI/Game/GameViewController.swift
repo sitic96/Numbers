@@ -29,7 +29,7 @@ final class GameViewController: UIViewController {
     
     private func start() {
         engineIterator.reset()
-        engine.start(with: .classic)
+        engine.start(with: .test)
         numbersCollectionView.reloadData()
     }
 }
