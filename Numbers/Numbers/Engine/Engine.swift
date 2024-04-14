@@ -59,11 +59,12 @@ final class Engine {
         items[firstIndex] = nil
         checkLine(forCell: firstCell, atIndex: firstIndex)
         
-        guard let secondIndex = items.firstIndex(of: secondCell) else {
+        guard let secondIndex = items.firstIndex(of: secondCell),
+        let secondItem = items[secondIndex] else {
             return
         }
         items[secondIndex] = nil
-        checkLine(forCell: secondCell, atIndex: secondIndex)
+        checkLine(forCell: secondItem, atIndex: secondIndex)
     }
     
     private func checkLine(forCell cell: Cell, atIndex index: Int) {
@@ -76,12 +77,16 @@ final class Engine {
         let startRange = index.quotientAndRemainder(dividingBy: 9).quotient * 9
         if itemsInFirstRow.isEmpty {
             items.removeSubrange(startRange...min(startRange+8, itemsCount-1))
-            recalculateLines()
+            recalculateLines(startingFrom: cell.position.row)
         }
     }
     
-    private func recalculateLines() {
-        
+    private func recalculateLines(startingFrom removedLine: Int) {
+        items.enumerated().forEach {
+            if $1?.position.row ?? -1 >= removedLine {
+                items[$0]?.position.row-=1
+            }
+        }
     }
     
     private func isTop(_ cell: Cell, to selectedCell: Cell) -> Bool {
@@ -158,7 +163,7 @@ extension Engine: EngineProtocol {
             items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 1, 1, 2, 1, 3, 1, 4, 1, 5, 1, 6, 1, 7, 1, 8]
                 .enumerated()
                 .map {
-                    Cell(number: $1, position: Position(row: $0.quotientAndRemainder(dividingBy: 9).quotient,
+                    Cell(id: UUID(), number: $1, position: Position(row: $0.quotientAndRemainder(dividingBy: 9).quotient,
                                                         item: $0 % 9))
                 }
         case .random(let randomizer):
@@ -168,7 +173,7 @@ extension Engine: EngineProtocol {
             items = Array<Int>(repeating: 1, count: 25)
                 .enumerated()
                 .map {
-                    Cell(number: $1, position: Position(row: $0.quotientAndRemainder(dividingBy: 9).quotient,
+                    Cell(id: UUID(), number: $1, position: Position(row: $0.quotientAndRemainder(dividingBy: 9).quotient,
                                                         item: $0 % 9))
                 }
         }

@@ -30,21 +30,11 @@ final class EngineIterator: EngineIteratorProtocol {
     }
     
     private func firstItem() -> Cell? {
-        for item in engine.items {
-            if item != nil {
-                return item
-            }
-        }
-        return nil
+        engine.items.first ?? nil
     }
     
     private func lastItem() -> Cell? {
-        for item in engine.items.reversed() {
-            if item != nil {
-                return item
-            }
-        }
-        return nil
+        engine.items.last ?? nil
     }
     
     func next() -> Cell? {

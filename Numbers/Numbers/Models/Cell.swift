@@ -8,6 +8,11 @@
 import Foundation
 
 struct Cell: Equatable {
+    let id: UUID
     let number: Int
-    let position: Position
+    var position: Position
+    
+    static func ==(lhs: Cell, rhs: Cell) -> Bool {
+        return lhs.id == rhs.id
+    }
 }

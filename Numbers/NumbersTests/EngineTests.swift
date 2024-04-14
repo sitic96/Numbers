@@ -29,8 +29,8 @@ final class EngineTests: XCTestCase {
         engine.start(with: .classic)
         
         // when
-        engine.didSelect(cell: Cell(number: 1, position: .init(row: 1, item: 0)))
-        engine.didSelect(cell: Cell(number: 1, position: .init(row: 1, item: 1)))
+        engine.didSelect(cell: engine.items[9]!)
+        engine.didSelect(cell: engine.items[10]!)
         
         // then
         XCTAssertNil(engine.items[9])
@@ -42,8 +42,8 @@ final class EngineTests: XCTestCase {
         engine.start(with: .classic)
         
         // when
-        engine.didSelect(cell: Cell(number: 1, position: .init(row: 1, item: 1)))
-        engine.didSelect(cell: Cell(number: 1, position: .init(row: 1, item: 0)))
+        engine.didSelect(cell: engine.items[9]!)
+        engine.didSelect(cell: engine.items[10]!)
         
         // then
         XCTAssertNil(engine.items[9])
@@ -55,8 +55,8 @@ final class EngineTests: XCTestCase {
         engine.start(with: .classic)
         
         // test
-        engine.didSelect(cell: Cell(number: 1, position: .init(row: 1, item: 1)))
-        engine.didSelect(cell: Cell(number: 1, position: .init(row: 2, item: 1)))
+        engine.didSelect(cell: engine.items[10]!)
+        engine.didSelect(cell: engine.items[19]!)
         
         // then
         XCTAssertNil(engine.items[10])
@@ -68,8 +68,8 @@ final class EngineTests: XCTestCase {
         engine.start(with: .classic)
         
         // test
-        engine.didSelect(cell: Cell(number: 1, position: .init(row: 2, item: 1)))
-        engine.didSelect(cell: Cell(number: 1, position: .init(row: 1, item: 1)))
+        engine.didSelect(cell: engine.items[10]!)
+        engine.didSelect(cell: engine.items[19]!)
         
         // then
         XCTAssertNil(engine.items[10])
@@ -81,10 +81,10 @@ final class EngineTests: XCTestCase {
         engine.start(with: .classic)
         
         // when
-        engine.didSelect(cell: Cell(number: 1, position: .init(row: 1, item: 0)))
-        engine.didSelect(cell: Cell(number: 1, position: .init(row: 1, item: 1)))
-        engine.didSelect(cell: Cell(number: 9, position: .init(row: 0, item: 8)))
-        engine.didSelect(cell: Cell(number: 1, position: .init(row: 1, item: 2)))
+        engine.didSelect(cell: engine.items[9]!)
+        engine.didSelect(cell: engine.items[10]!)
+        engine.didSelect(cell: engine.items[8]!)
+        engine.didSelect(cell: engine.items[11]!)
         
         // then
         XCTAssertNil(engine.items[8])
@@ -132,8 +132,8 @@ final class EngineTests: XCTestCase {
         
         
         // when
-        engine.didSelect(cell: Cell(number: 1, position: .init(row: 0, item: 0)))
-        engine.didSelect(cell: Cell(number: 1, position: .init(row: 0, item: 1)))
+        engine.didSelect(cell: engine.items[0]!)
+        engine.didSelect(cell: engine.items[1]!)
         
         // then
         XCTAssertNil(engine.items[0])
@@ -146,30 +146,30 @@ final class EngineTests: XCTestCase {
     func test_selectedCell() {
         // given
         engine.start(with: .classic)
+        let cell = Cell(number: 1, position: .init(row: 0, item: 0))
         
         // when
-        engine.didSelect(cell: Cell(number: 1, position: .init(row: 0, item: 0)))
+        engine.didSelect(cell: cell)
         
         // then
         XCTAssertEqual(engine.selectedCell!.number, 1)
-        XCTAssertEqual(engine.selectedCell!.position.row, 0)
-        XCTAssertEqual(engine.selectedCell!.position.item, 0)
+        XCTAssertEqual(engine.selectedCell!.id, cell.id)
     }
     
     func test_unselectedCell() {
         // given
         engine.start(with: .classic)
+        let cell = Cell(number: 3, position: .init(row: 0, item: 2))
         
         // when
-        engine.didSelect(cell: Cell(number: 3, position: .init(row: 0, item: 2)))
+        engine.didSelect(cell: cell)
         
         // then
         XCTAssertEqual(engine.selectedCell!.number, 3)
-        XCTAssertEqual(engine.selectedCell!.position.row, 0)
-        XCTAssertEqual(engine.selectedCell!.position.item, 2)
+        XCTAssertEqual(engine.selectedCell!.id, cell.id)
         
         // when
-        engine.didSelect(cell: Cell(number: 3, position: .init(row: 0, item: 2)))
+        engine.didSelect(cell: cell)
         
         // then
         XCTAssertNil(engine.selectedCell)
@@ -179,14 +179,14 @@ final class EngineTests: XCTestCase {
     func testSelectedCell_whenCellRemoved() {
         // given
         engine.start(with: .classic)
+        let cell = Cell(number: 9, position: .init(row: 0, item: 8))
         
         // when
-        engine.didSelect(cell: Cell(number: 9, position: .init(row: 0, item: 8)))
+        engine.didSelect(cell: cell)
         
         // then
         XCTAssertEqual(engine.selectedCell!.number, 9)
-        XCTAssertEqual(engine.selectedCell!.position.row, 0)
-        XCTAssertEqual(engine.selectedCell!.position.item, 8)
+        XCTAssertEqual(engine.selectedCell!.id, cell.id)
         
         // when
         engine.didSelect(cell: Cell(number: 1, position: .init(row: 1, item: 8)))
@@ -222,33 +222,33 @@ final class EngineTests: XCTestCase {
         engine.start(with: .random(randomizer))
         
         // when
-        engine.didSelect(cell: Cell(number: 1, position: .init(row: 0, item: 1)))
-        engine.didSelect(cell: Cell(number: 1, position: .init(row: 0, item: 2)))
+        engine.didSelect(cell: engine.items[1]!)
+        engine.didSelect(cell: engine.items[2]!)
         
-        engine.didSelect(cell: Cell(number: 1, position: .init(row: 0, item: 3)))
-        engine.didSelect(cell: Cell(number: 1, position: .init(row: 0, item: 4)))
+        engine.didSelect(cell: engine.items[3]!)
+        engine.didSelect(cell: engine.items[4]!)
         
-        engine.didSelect(cell: Cell(number: 1, position: .init(row: 0, item: 5)))
-        engine.didSelect(cell: Cell(number: 1, position: .init(row: 0, item: 6)))
+        engine.didSelect(cell: engine.items[5]!)
+        engine.didSelect(cell: engine.items[6]!)
         
-        engine.didSelect(cell: Cell(number: 1, position: .init(row: 0, item: 8)))
-        engine.didSelect(cell: Cell(number: 1, position: .init(row: 1, item: 0)))
+        engine.didSelect(cell: engine.items[8]!)
+        engine.didSelect(cell: engine.items[9]!)
         
-        engine.didSelect(cell: Cell(number: 1, position: .init(row: 0, item: 7)))
-        engine.didSelect(cell: Cell(number: 1, position: .init(row: 1, item: 7)))
+        engine.didSelect(cell: engine.items[7]!)
+        engine.didSelect(cell: engine.items[16]!)
         
-        engine.didSelect(cell: Cell(number: 1, position: .init(row: 1, item: 2)))
-        engine.didSelect(cell: Cell(number: 1, position: .init(row: 1, item: 3)))
+        engine.didSelect(cell: engine.items[11]!)
+        engine.didSelect(cell: engine.items[12]!)
         
-        engine.didSelect(cell: Cell(number: 1, position: .init(row: 1, item: 4)))
-        engine.didSelect(cell: Cell(number: 1, position: .init(row: 1, item: 5)))
+        engine.didSelect(cell: engine.items[13]!)
+        engine.didSelect(cell: engine.items[14]!)
         
-        engine.didSelect(cell: Cell(number: 1, position: .init(row: 1, item: 6)))
-        engine.didSelect(cell: Cell(number: 1, position: .init(row: 1, item: 8)))
+        engine.didSelect(cell: engine.items[15]!)
+        engine.didSelect(cell: engine.items[17]!)
         
         
-        engine.didSelect(cell: Cell(number: 1, position: .init(row: 0, item: 0)))
-        engine.didSelect(cell: Cell(number: 1, position: .init(row: 1, item: 1)))
+        engine.didSelect(cell: engine.items[0]!)
+        engine.didSelect(cell: engine.items[10]!)
         
         // then
         XCTAssertEqual(engine.items[0]!.number, 2)

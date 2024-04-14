@@ -8,6 +8,6 @@
 import Foundation
 
 struct Position: Equatable {
-    let row: Int
+    var row: Int
     let item: Int
 }

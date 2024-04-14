@@ -22,7 +22,8 @@ struct Randomizer: RandomizerProtocol {
             array.append(randomNumber())
         }
         return array.enumerated().map {
-            Cell(number: $1,
+            Cell(id: UUID(),
+                 number: $1,
                  position: Position(row: $0.quotientAndRemainder(dividingBy: 9).quotient, item: $0 % 9))
         }
     }
